@@ -138,7 +138,7 @@ export class PanierComponent implements OnInit, OnChanges {
         this.orderDto.userId = this.user1.idUser;
         this.orderDto.products.push(new ProductQteDto(pr.productToAdd.idProduct, pr.qte));
         this.orderS.createOrder(this.orderDto).subscribe(data => {this.resultat = data; if (this.resultat === 'ACCEPTED') {
-          this.showMessage = true;} }, error => console.log(error));
+          this.showMessage = true; } }, error => console.log(error));
       }
     }
   }
